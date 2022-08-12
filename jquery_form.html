@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="jquery_form.js"></script>
+    <style>
+        form{
+            margin-left:25vw;
+            margin-top: 10vh;
+        }
+        button{
+            margin-left:45vw;
+        }
+    </style>
+    
+</head>
+<body>
+    <h1 class=" display-4 text-center lead"> <span class="text-muted"> JQuery</span> form validation</h1>
+    <form method="POST" class="col-9 justify-content-center">
+        <div class="row">
+            <div class="col-md-4">
+                <label for="prenom" class="">First name <span class="col-md-4 text-danger" id="prenom_err"> 3 letter or more</span></label>
+                <input name="prenom" id="prenom" type="text" class=" form-control" placeholder="First name" aria-label="First name">
+            </div>
+            <div class="col-md-4">
+                <label for="nom" class="">Last name <span class="col-md-4 text-danger" id="nom_err"> 3 letters or more</span></label>
+                <input name="nom" id="nom" type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-8">
+                <label for="email" class="">Email <span class="col-8 text-danger" id="email_err">Enter a valid Email!</span></label>
+                <input type="text" name="email" id="email" class="form-control " placeholder="Email" aria-label="Email">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <label for="pwd1" class="">Password <span class="col-md-4 text-danger" id="pwd1_err">5 characters at least!</span></label>
+                <input name="pwd1" id="pwd1" type="password" class="form-control" placeholder="Password" aria-label="Password">
+            </div>
+            <div class="col-md-4">
+                <label for="pwd2" class="">Confirm Password <span class="col-md-4 text-danger" id="pwd2_err">must be identical</span></label>
+                <input name="pwd2" id="pwd2" type="password" class="form-control" placeholder="Confirm password" aria-label="confirm password">
+            </div>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="gender" id="male" value="male" checked>
+            <label class="form-check-label" for="gridRadios1"> Male </label>
+        </div>       
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="gender" id="female" value="male">
+            <label class="form-check-label" for="gridRadios2">Female</label>
+        </div>
+        <div class="col-12">
+            <button type="submit" id="submit" name="submit" class="btn btn-primary">Submit</button>
+        </div>
+        <div class="col-12 error_msg"></div>
+    </form>
+</body>
+</html>
